@@ -36,7 +36,7 @@ jobs:
           git config user.email "solitude@protogalaxy.me"
           if [ -n "$(git status --porcelain)" ]; then
             git add ./articles
-            git commit -m "Update articles with series links [skip ci]"
+            git commit -m "Update articles with GitHub Actions"
             git push
           else
             echo "No changes detected in articles. Skipping commit."
