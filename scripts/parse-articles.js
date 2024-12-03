@@ -82,7 +82,6 @@ fs.readdirSync(sourceDir).forEach((file) => {
                 published: sourceData.published !== undefined ? sourceData.published : true,
             };
 
-            // 手动生成 frontmatter 和内容
             const frontMatter = `---\n` +
                 `title: "${metadata.title}"\n` +
                 `emoji: "${metadata.emoji}"\n` +
