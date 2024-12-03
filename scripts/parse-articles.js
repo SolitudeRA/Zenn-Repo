@@ -76,7 +76,7 @@ fs.readdirSync(sourceDir).forEach((file) => {
 
             const metadata = {
                 title: sourceData.title,
-                emoji: sourceData.emoji || '📄',
+                emoji: sourceData.emoji || '🌃',
                 type: sourceData.type || 'tech',
                 topics: sourceData.topics || ['default'],
                 published: sourceData.published !== undefined ? sourceData.published : true,
