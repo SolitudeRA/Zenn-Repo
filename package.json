@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
     "zenn-cli": "^0.1.158"
   }
 }

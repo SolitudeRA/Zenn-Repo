@@ -1,20 +1,27 @@
 ---
-title: "ホームサーバー完全構築ガイド #3 WordPressのデプロイ"
-emoji: "🌃"
-type: "tech"
+title: 'ホームサーバー完全構築ガイド #3 WordPressのデプロイ'
+emoji: "\U0001F303"
+type: tech
 topics:
-  - "wordpress"
-  - "nginx"
-  - "selfhosting"
-  - "homeserver"
+  - wordpress
+  - nginx
+  - selfhosting
+  - homeserver
 published: true
-published_at: "2024-11-11 06:09"
+published_at: '2024-11-11 06:09'
 ---
+<!-- START_SERIES -->
 
-記事シリーズ:
+ホームサーバー完全構築ガイド シリーズ記事：
+
 [ホームサーバー完全構築ガイド #0 計画とハードウェア選定](https://zenn.dev/solitudera/articles/b562e1b97af561)
 [ホームサーバー完全構築ガイド #1 OS導入とインフラ設定](https://zenn.dev/solitudera/articles/6ebdfdf096b542)
 [ホームサーバー完全構築ガイド #2 サービス群の選定](https://zenn.dev/solitudera/articles/3ee2e0d5c5a8b9)
+[ホームサーバー完全構築ガイド #4 情報収集システムの構築](https://zenn.dev/solitudera/articles/e798fba7c06eb4)
+[ホームサーバー完全構築ガイド #5 クラウドストレージの構築](https://zenn.dev/solitudera/articles/10f0826d0213efdda16b24bc7d7e3df2)
+
+<!-- END_SERIES -->
+
 
 ### はじめに
 
