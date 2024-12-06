@@ -56,12 +56,16 @@ fs.readdirSync(sourceDir).forEach((file) => {
             const targetContent = fs.readFileSync(targetFilePath, 'utf-8');
             const { data: targetData } = matter(targetContent);
 
-            // 内容を更新（既存のヘッダーを手动生成）
+            // 更新時にもsourceData.tagsが存在すればそれをtopicsに反映
+            const updatedTopics = Array.isArray(sourceData.tags) 
+                ? sourceData.tags 
+                : (Array.isArray(targetData.topics) ? targetData.topics : ['default']);
+
             const frontMatter = `---\n` +
                 `title: "${targetData.title}"\n` +
                 `emoji: "${targetData.emoji}"\n` +
                 `type: "${targetData.type}"\n` +
-                `topics:\n${targetData.tags.map((topic) => `  - "${topic}"`).join('\n')}\n` +
+                `topics:\n${updatedTopics.map((t) => `  - "${t}"`).join('\n')}\n` +
                 `published: ${targetData.published}\n` +
                 (targetData.published_at ? `published_at: "${targetData.published_at}"\n` : '') +
                 `---`;
@@ -78,7 +82,8 @@ fs.readdirSync(sourceDir).forEach((file) => {
                 title: sourceData.title,
                 emoji: sourceData.emoji || '🌃',
                 type: sourceData.type || 'tech',
-                topics: sourceData.topics || ['default'],
+                // tagsフィールドをtopicsへ変換する
+                topics: Array.isArray(sourceData.tags) ? sourceData.tags : ['default'],
                 published: sourceData.published !== undefined ? sourceData.published : true,
             };
 
@@ -86,7 +91,7 @@ fs.readdirSync(sourceDir).forEach((file) => {
                 `title: "${metadata.title}"\n` +
                 `emoji: "${metadata.emoji}"\n` +
                 `type: "${metadata.type}"\n` +
-                `topics:\n${metadata.tags.map((topic) => `  - "${topic}"`).join('\n')}\n` +
+                `topics:\n${metadata.topics.map((topic) => `  - "${topic}"`).join('\n')}\n` +
                 `published: ${metadata.published}\n` +
                 `---`;
 
