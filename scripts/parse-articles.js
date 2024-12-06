@@ -86,7 +86,7 @@ fs.readdirSync(sourceDir).forEach((file) => {
                 `title: "${metadata.title}"\n` +
                 `emoji: "${metadata.emoji}"\n` +
                 `type: "${metadata.type}"\n` +
-                `topics:\n${metadata.topics.map((topic) => `  - "${topic}"`).join('\n')}\n` +
+                `topics:\n${metadata.tags.map((topic) => `  - "${topic}"`).join('\n')}\n` +
                 `published: ${metadata.published}\n` +
                 `---`;
 
