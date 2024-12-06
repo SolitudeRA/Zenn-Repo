@@ -61,7 +61,7 @@ fs.readdirSync(sourceDir).forEach((file) => {
                 `title: "${targetData.title}"\n` +
                 `emoji: "${targetData.emoji}"\n` +
                 `type: "${targetData.type}"\n` +
-                `topics:\n${targetData.topics.map((topic) => `  - "${topic}"`).join('\n')}\n` +
+                `topics:\n${targetData.tags.map((topic) => `  - "${topic}"`).join('\n')}\n` +
                 `published: ${targetData.published}\n` +
                 (targetData.published_at ? `published_at: "${targetData.published_at}"\n` : '') +
                 `---`;
